@@ -1,0 +1,18 @@
+a=input()
+f=open("C:\\test.txt",'w')
+f.write(a)
+f.close()
+f=open("C:\\test.txt",'r')
+b=f.readlines()
+for c in b:
+  print(c)
+f.close()
+f=open("C:\\test.txt",'a')
+f.write('가나다')
+f.close()
+f=open("C:\\test.txt",'r')
+b=f.readlines()
+for c in b:
+  print(c)
+f.tell()
+f.close()
