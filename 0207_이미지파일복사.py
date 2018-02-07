@@ -1,0 +1,5 @@
+k_image = open ('C:/koala.jpg','rb')
+k_image_2=open('C:/koala2.jpg','wb')
+k_image_2.write(k_image.read())
+k_image.close()
+k_image_2.close()
