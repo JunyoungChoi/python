@@ -21,12 +21,10 @@ def get_request_url(url,enc='utf-8'):
     print(e)
     print("[%s] Error for URL : %s" %(datetime.datetime.now(),url))
 def getPelicanaAddress(result):
-  for page_idx in count():
-    Pelicana_URL = "www.pelicana.co.kr/store/stroe_search.html?page=%s&branch_name=&gu=&si=" % str(page_idx+1)
+  for page_idx in range(0,10):
+    Pelicana_URL = "http://www.pelicana.co.kr/store/stroe_search.html?page=%s&branch_name=&gu=&si=" % str(page_idx+1)
     print(Pelicana_URL)
     print("[Pericana Page] : [%s]" %(str(page_idx+1)))
-
-    print('a')
     rcv_data=get_request_url(Pelicana_URL)
     
     soupData=BeautifulSoup(rcv_data,'html.parser')
